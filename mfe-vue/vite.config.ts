@@ -10,14 +10,17 @@ export default defineConfig({
     vue({
       template: {
         compilerOptions: {
-          isCustomElement: (tag: string) => tag.includes('-'),
+          isCustomElement: (tag: string) => ['angular-card'].includes(tag),
         },
       },
     }),
     vueDevTools(),
     federation({
-      name: 'mfe_vue',
+      name: 'mfeVue',
       filename: 'remoteEntry.js',
+      exposes: {
+        './vue-card': './src/components/vue-card.ts',
+      },
     }),
   ],
   resolve: {

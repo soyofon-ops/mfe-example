@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import VueCard from '@/components/VueCard.vue'
-import { useRemote } from '@/composables/useRemote'
+import { useRemoteLoader } from '@/plugins/remote-loader/use-remote-loader'
 
 const inputMessage = ref('Hello from Vue!')
 
-const instance = useRemote()
+const { instance } = useRemoteLoader()
 
 onMounted(() => {
-  instance.loadRemote('mfe_angular/angular-card')
+  instance?.loadRemote('mfeAngular/angular-card')
 })
 
 function debugVueCardEvent(message: string) {

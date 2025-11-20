@@ -1,12 +1,9 @@
-import { createApplication } from '@angular/platform-browser';
-import { AngularCard } from './angular-card';
-import { appConfig } from '../../app.config';
-import { createCustomElement, NgElementConfig } from '@angular/elements';
 import { Type } from '@angular/core';
+import { createCustomElement, NgElementConfig } from '@angular/elements';
+import { createApplication } from '@angular/platform-browser';
+import { appConfig } from '../../app.config';
 
-defineCustomElement('angular-card', AngularCard);
-
-async function defineCustomElement<T>(
+export async function defineCustomElement<T>(
   name: string,
   component: Type<T>,
   options?: NgElementConfig

@@ -11,22 +11,24 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "^20.3.0",
-    "@angular/compiler": "^20.3.0",
-    "@angular/core": "^20.3.0",
-    "@angular/elements": "^20.3.11",
-    "@angular/forms": "^20.3.0",
-    "@angular/platform-browser": "^20.3.0",
-    "@angular/router": "^20.3.0",
+    "@angular/common": "^20.3.13",
+    "@angular/compiler": "^20.3.13",
+    "@angular/core": "^20.3.13",
+    "@angular/elements": "^20.3.13",
+    "@angular/forms": "^20.3.13",
+    "@angular/platform-browser": "^20.3.13",
+    "@angular/router": "^20.3.13",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@angular-architects/module-federation": "20.0.0",
-    "@angular-devkit/build-angular": "^20.3.4",
-    "@angular/build": "^20.3.4",
-    "@angular/cli": "^20.3.4",
-    "@angular/compiler-cli": "^20.3.0",
+    "@angular-architects/module-federation": "^20.0.0",
+    "@angular-devkit/build-angular": "^20.3.11",
+    "@angular/build": "^20.3.11",
+    "@angular/cli": "^20.3.11",
+    "@angular/compiler-cli": "^20.3.13",
+    "@module-federation/enhanced": "^0.21.4",
+    "@module-federation/runtime-core": "^0.21.4",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.9.0",
     "karma": "~6.4.0",
@@ -36,5 +38,13 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "ngx-build-plus": "^20.0.0",
     "typescript": "~5.9.2"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "@module-federation/enhanced": "^0.21.4",
+        "@module-federation/runtime-core": "^0.21.4"
+      }
+    }
   }
 }

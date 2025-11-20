@@ -1,20 +1,19 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const props = withDefaults(
-  defineProps<{
-    inputMessage: string
-  }>(),
-  {
-    inputMessage: 'Hello from Vue!',
-  },
-)
+type Props = { inputMessage: string }
+
+type Emits = {
+  (e: 'sendMessage', message: string): void
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  inputMessage: 'Hello from Vue!',
+})
+
+const emit = defineEmits<Emits>()
 
 const count = ref(0)
-
-const emit = defineEmits<{
-  (e: 'sendMessage', message: string): void
-}>()
 
 function increaseCount() {
   count.value++

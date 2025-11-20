@@ -1,0 +1,11 @@
+<input type="text" [(ngModel)]="inputMessage" />
+
+<app-angular-card
+  [inputMessage]="inputMessage()"
+  (sendMessage)="debugAngularCardEvent($event)"
+></app-angular-card>
+
+<app-vue-card
+  [inputMessage]="inputMessage()"
+  (sendMessage)="debugVueCardEvent($event)"
+></app-vue-card>

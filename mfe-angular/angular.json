@@ -19,6 +19,9 @@
           "options": {
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "allowedCommonJsDependencies": [
+              "@module-federation/enhanced/runtime"
+            ],
             "assets": [
               {
                 "glob": "**/*",
