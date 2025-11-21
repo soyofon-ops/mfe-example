@@ -27,6 +27,6 @@ export class AngularCard {
   }
 
   sendMessageToHost() {
-    this.sendMessage.emit(`Hello from Angular Card! ${this.inputMessage()}`);
+    this.sendMessage.emit('Hello from Angular');
   }
 }

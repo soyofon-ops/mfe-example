@@ -10,12 +10,7 @@ import { RemoteLoader } from '../remote-loader';
 @Component({
   selector: 'app-vue-card',
   imports: [],
-  template: `
-    <vue-card
-      [inputMessage]="inputMessage()"
-      (sendMessage)="remoteSendMessage($event)"
-    ></vue-card>
-  `,
+  templateUrl: './vue-card.html',
   styleUrl: './vue-card.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
@@ -31,6 +26,6 @@ export class VueCard {
   }
 
   remoteSendMessage(event: Event) {
-    this.sendMessage.emit((event as CustomEvent<string>).detail);
+    this.sendMessage.emit((event as CustomEvent<string[]>).detail[0]);
   }
 }

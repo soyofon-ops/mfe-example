@@ -20,7 +20,7 @@ function increaseCount() {
 }
 
 function sendMessageToHost() {
-  emit('sendMessage', props.inputMessage)
+  emit('sendMessage', 'Hello from Vue')
 }
 </script>
 
